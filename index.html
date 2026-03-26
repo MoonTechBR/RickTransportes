@@ -3,90 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Rick Transportes | Carretos e Mudanças</title>
+    <meta name="description" content="Rick Transportes - Soluções em Logística Rápida, Carretos e Mudanças. Peça seu orçamento online!">
+    
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Rick Transportes - Orçamento Online</title>
-</head>
-<body class="bg-gray-100">
 
-    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center flex flex-col justify-center items-center">
-        <div class="flex flex-col items-center justify-center">
-            <img src="./assets/logo-rick.png" alt="Logo Rick Transportes" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"/>
-            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Rick Transportes</h1>
-            <span class="text-white font-medium">Mudanças, Fretes e Logística Especializada</span>
-            
-            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
-                <span class="text-white font-medium">Disponível para Orçamentos</span>
-            </div>
+    <style>
+        .bg-rick { background-color: #003366; } /* Azul da logo */
+        .text-rick { color: #003366; }
+        .border-rick { border-color: #00a8e8; } /* Azul claro do neon */
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="w-full h-[450px] bg-slate-900 flex flex-col justify-center items-center text-center px-4" 
+            style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2070'); background-size: cover; background-position: center;">
+        
+        <img src="./assets/logo-rick.png" alt="Rick Transportes" 
+             class="w-40 h-40 rounded-full border-4 border-white shadow-2xl mb-4 object-cover bg-white"/>
+        
+        <h1 class="text-4xl font-bold text-white uppercase tracking-tighter">Rick Transportes</h1>
+        <p class="text-white text-lg mt-2 font-light">Soluções em Logística Rápida • Carretos • Mudanças</p>
+        
+        <div class="mt-6 px-4 py-2 rounded-full transition-all" id="status-badge">
+            <span id="status-text" class="text-white font-bold uppercase text-sm tracking-widest">Verificando Horário...</span>
         </div>
     </header>
 
-    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Nossos Serviços</h2>
+    <main class="max-w-7xl mx-auto px-4 py-10">
+        <h2 class="text-3xl font-black text-center mb-10 text-rick italic underline decoration-blue-400">NOSSOS SERVIÇOS</h2>
 
-    <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
-        
-        <div class="flex gap-2 bg-white p-3 rounded-md shadow-sm">
-            <img src="./assets/furgon.png" alt="Frete Pequeno" class="w-28 h-28 rounded-md hover:scale-110 duration-300 cursor-pointer"/>
-            <div class="w-full">
-                <p class="font-bold text-lg">Frete Local (Furgão)</p>
-                <p class="text-sm text-gray-600">Ideal para eletrodomésticos e pequenas mudanças urbanas.</p>
-                <div class="flex items-center gap-2 justify-between mt-3">
-                    <p class="font-bold text-lg">A partir de R$ 150</p>
-                    <button class="bg-zinc-900 px-5 py-2 rounded add-to-cart-btn text-white" data-name="Frete Local Furgão" data-price="150.00">
-                        <i class="fa fa-plus text-lg"></i>
-                    </button>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="menu">
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row border-b-4 border-blue-500 hover:scale-[1.02] duration-300">
+                <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=500" class="w-full md:w-40 h-40 object-cover"/>
+                <div class="p-5 flex-1">
+                    <h3 class="font-black text-xl mb-1 uppercase">Carretos Expresso</h3>
+                    <p class="text-gray-600 text-sm">Transporte rápido para itens individuais, sofás, geladeiras e compras.</p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="font-bold text-xl text-green-600">A partir de R$ 120</span>
+                        <button class="bg-rick text-white p-3 rounded-xl add-to-cart-btn" data-name="Carreto Expresso" data-price="120.00">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="flex gap-2 bg-white p-3 rounded-md shadow-sm">
-            <img src="./assets/truck.png" alt="Mudança Grande" class="w-28 h-28 rounded-md hover:scale-110 duration-300 cursor-pointer"/>
-            <div class="w-full">
-                <p class="font-bold text-lg">Mudança Residencial</p>
-                <p class="text-sm text-gray-600">Caminhão Baú completo com mantas de proteção.</p>
-                <div class="flex items-center gap-2 justify-between mt-3">
-                    <p class="font-bold text-lg">Sob Consulta</p>
-                    <button class="bg-zinc-900 px-5 py-2 rounded add-to-cart-btn text-white" data-name="Mudança Residencial" data-price="0.00">
-                        <i class="fa fa-plus text-lg"></i>
-                    </button>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row border-b-4 border-blue-500 hover:scale-[1.02] duration-300">
+                <img src="https://images.unsplash.com/photo-1600518464441-9154a4dba21b?auto=format&fit=crop&q=80&w=500" class="w-full md:w-40 h-40 object-cover"/>
+                <div class="p-5 flex-1">
+                    <h3 class="font-black text-xl mb-1 uppercase">Mudança Residencial</h3>
+                    <p class="text-gray-600 text-sm">Caminhão baú para mudanças completas com cuidado e proteção.</p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="font-bold text-xl text-green-600 italic">Sob Consulta</span>
+                        <button class="bg-rick text-white p-3 rounded-xl add-to-cart-btn" data-name="Mudança Residencial" data-price="0.00">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
+
         </div>
     </main>
 
-    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
-        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px] max-h-[90vh] overflow-y-auto">
-            <h2 class="text-center font-bold text-2xl mb-2">Sua Solicitação</h2>
+    <div class="fixed inset-0 bg-black/70 z-[100] flex items-center justify-center hidden p-4" id="cart-modal">
+        <div class="bg-white w-full max-w-lg rounded-3xl p-6 overflow-y-auto max-h-[90vh]">
+            <h2 class="text-2xl font-black text-center mb-4 uppercase italic">Solicitação de Orçamento</h2>
             
-            <div id="cart-items" class="flex flex-col mb-4"></div>
-            
-            <div class="border-t pt-4">
-                <p class="font-bold">Informações do Trajeto:</p>
-                <input type="text" placeholder="Endereço de Origem completo" id="origin-address" class="w-full border-2 p-2 rounded my-2 outline-none"/>
-                <p id="origin-warn" class="text-red-500 hidden text-sm">Por favor, informe a origem.</p>
+            <div id="cart-items" class="mb-6 space-y-3"></div>
 
-                <input type="text" placeholder="Endereço de Destino completo" id="destination-address" class="w-full border-2 p-2 rounded my-2 outline-none"/>
-                <p id="destination-warn" class="text-red-500 hidden text-sm">Por favor, informe o destino.</p>
-
-                <textarea placeholder="Observações (ex: tem escadas, precisa de ajudante?)" id="obs-input" class="w-full border-2 p-2 rounded my-2 outline-none h-24"></textarea>
+            <div class="space-y-4">
+                <p class="font-bold border-l-4 border-rick pl-2 uppercase text-sm">Preencha os dados do trajeto:</p>
+                
+                <input type="text" id="origin" placeholder="📍 Ponto de Retirada (Rua, Nº, Bairro)" class="w-full p-3 bg-gray-100 rounded-xl outline-none focus:ring-2 ring-blue-500"/>
+                <input type="text" id="destination" placeholder="🏁 Ponto de Entrega (Rua, Nº, Bairro)" class="w-full p-3 bg-gray-100 rounded-xl outline-none focus:ring-2 ring-blue-500"/>
+                <textarea id="obs" placeholder="📦 O que será transportado? (Ex: Geladeira, 10 caixas, tem escada?)" class="w-full p-3 bg-gray-100 rounded-xl outline-none h-24 resize-none"></textarea>
             </div>
 
-            <div class="flex items-center justify-between mt-5 w-full">
-                <button id="close-modal-btn" class="px-4 py-2 border-2 rounded">Voltar</button>
-                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-2 rounded font-bold">Enviar para WhatsApp</button>
+            <div class="flex gap-4 mt-8">
+                <button id="close-modal-btn" class="flex-1 py-3 font-bold text-gray-500">Voltar</button>
+                <button id="checkout-btn" class="flex-1 bg-green-600 text-white py-3 rounded-xl font-black shadow-lg shadow-green-200 uppercase">Enviar Orçamento</button>
             </div>
         </div>
     </div>
 
-    <footer class="w-full bg-red-600 py-3 fixed bottom-0 z-40 flex items-center justify-center shadow-inner">
-        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
-            (<span id="cart-count">0</span>) Ver Solicitação de Orçamento
-            <i class="fa fa-truck text-lg"></i>
+    <footer class="fixed bottom-0 w-full bg-rick p-4 flex justify-center z-50">
+        <button id="cart-btn" class="flex items-center gap-3 text-white font-black text-lg animate-pulse">
+            (<span id="cart-count">0</span>) VER MINHA LISTA
+            <i class="fa fa-truck-loading text-2xl"></i>
         </button>
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="script.js"></script>
 </body>
 </html>
