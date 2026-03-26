@@ -4,150 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Rick Transportes | Carretos e Mudanças - (11) 96369-2499</title>
-<meta name="title" content="Rick Transportes | Carretos e Mudanças - (11) 96369-2499">
-<meta name="description" content="Solicite seu orçamento de frete ou mudança online. Atendimento ágil e seguro com Kia Bongo para toda a região.">
+    <title>Rick Transportes | Orçamento Online - (11) 96369-2499</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://moontechbr.github.io/RickTransportes/">
+    <meta property="og:title" content="🚚 Rick Transportes - Orçamento Online">
+    <meta property="og:description" content="Precisa de frete ou mudança? Escolha o serviço e receba o valor pelo WhatsApp!">
+    <meta property="og:image" content="https://i.ibb.co/pBXVVWn2/og-image.png">
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://moontechbr.github.io/RickTransportes/"> <meta property="og:title" content="🚚 Rick Transportes - Orçamento Online">
-<meta property="og:description" content="Precisa de frete ou mudança? Escolha o serviço, informe origem/destino e receba o valor pelo WhatsApp!">
-<meta property="og:image" content="https://i.ibb.co/pBXVVWn2/og-image.png"> <meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://moontechbr.github.io/RickTransportes/">
-<meta property="twitter:title" content="Rick Transportes | Carretos e Mudanças">
-<meta property="twitter:description" content="Solicite seu orçamento de frete ou mudança direto pelo celular.">
-<meta property="twitter:image" content="https://i.ibb.co/pBXVVWn2/og-image.png">
-
-    
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        /* Paleta de Cores extraída da Logo */
-        :root {
-            --rick-navy: #0e1e35;      /* Azul escuro do fundo */
-            --rick-cyan: #00d2ff;      /* Ciano neon dos detalhes */
-            --rick-blue: #0056b3;      /* Azul intermediário */
-        }
-
+        :root { --rick-navy: #0e1e35; --rick-cyan: #00d2ff; }
         .bg-rick-navy { background-color: var(--rick-navy); }
         .text-rick-cyan { color: var(--rick-cyan); }
-        .border-rick-cyan { border-color: var(--rick-cyan); }
-
-        /* Estilo para simular o brilho neon nas fotos dos serviços */
-        .neon-glow {
-            box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
-        }
-
-        /* Botão estilizado com o tema */
-        .btn-rick {
-            background-color: var(--rick-navy);
-            border: 2px solid var(--rick-cyan);
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-        .btn-rick:hover {
-            background-color: var(--rick-cyan);
-            color: var(--rick-navy);
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
-        }
+        .neon-glow { box-shadow: 0 0 15px rgba(0, 210, 255, 0.4); }
+        /* Animação para o botão de urgência */
+        @keyframes pulse-red { 0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); } 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); } }
+        .pulse-red { animation: pulse-red 2s infinite; }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 pb-24">
 
-    <header class="w-full h-[500px] flex flex-col justify-center items-center text-center px-4 relative overflow-hidden" 
+    <header class="w-full h-[550px] flex flex-col justify-center items-center text-center px-4 relative overflow-hidden" 
             style="background-image: linear-gradient(rgba(14, 30, 53, 0.85), rgba(14, 30, 53, 0.95)), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=2070'); background-size: cover; background-position: center;">
         
         <div class="absolute w-64 h-64 bg-cyan-500/20 blur-[120px] rounded-full"></div>
+        <img src="https://i.ibb.co/Z6PKrHtN/Logo-Rick2.png" alt="Rick Transportes" class="w-40 h-40 rounded-full border-4 border-rick-cyan shadow-2xl mb-4 bg-white object-contain z-10"/>
         
-        <img src="https://i.ibb.co/Z6PKrHtN/Logo-Rick2.png" alt="Rick Transportes" 
-             class="w-48 h-48 rounded-full border-4 border-rick-cyan shadow-[0_0_30px_rgba(0,210,255,0.4)] mb-6 z-10 bg-white object-contain"/>
+        <h1 class="text-5xl font-black text-white uppercase italic z-10 tracking-tighter">RICK <span class="text-rick-cyan">TRANSPORTES</span></h1>
         
-        <h1 class="text-5xl font-black text-white uppercase tracking-tighter z-10 italic">
-            Rick <span class="text-rick-cyan">Transportes</span>
-        </h1>
-        <p class="text-white text-xl mt-2 font-bold z-10 tracking-widest uppercase">
-            Expresso e Mudanças
-        </p>
+        <div class="mt-6 flex flex-wrap gap-3 z-10 justify-center">
+            <a href="tel:11963692499" class="bg-white text-rick-navy px-6 py-2 rounded-xl font-bold flex items-center gap-2 hover:bg-gray-200 transition">
+                <i class="fa fa-phone"></i> LIGAR AGORA
+            </a>
+            <button id="quick-lead-btn" class="bg-red-600 text-white px-6 py-2 rounded-xl font-bold pulse-red">ORÇAMENTO RÁPIDO</button>
+        </div>
 
-        <div class="mt-6 px-5 py-2 rounded-full transition-all z-10" id="status-badge">
-            <span id="status-text" class="text-white font-bold uppercase text-sm tracking-widest">Verificando Horário...</span>
+        <div class="mt-6 px-5 py-2 rounded-full transition-all z-10 bg-gray-700" id="status-badge">
+            <span id="status-text" class="text-white font-bold uppercase text-xs tracking-widest text-center">Verificando Horário...</span>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-10 mb-20">
-        <h2 class="text-3xl font-black text-center mb-10 text-rick-navy italic">SELECIONE O SERVIÇO</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="menu">
-            
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row hover:scale-[1.02] duration-300 neon-glow">
-                <img src="https://i.ibb.co/qMsqDVGn/Banner.jpg?auto=format&fit=crop&q=80&w=500" class="w-full md:w-40 h-40 object-cover"/>
-                <div class="p-5 flex-1 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-black text-xl mb-1 uppercase text-rick-navy">Carreto Expresso <span class="text-xs text-rick-cyan">Até 500kg</span></h3>
-                        <p class="text-gray-600 text-sm">Transporte rápido e seguro para sofás, geladeiras, compras e itens individuais.</p>
-                    </div>
-                    <div class="flex items-center justify-between mt-4">
-                        <span class="font-bold text-xl text-green-600">A partir de R$ 120</span>
-                        <button class="bg-rick-navy text-white p-3 rounded-xl add-to-cart-btn hover:bg-zinc-800" data-name="Carreto Expresso" data-price="120.00">
-                            <i class="fa fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
+    <main class="max-w-7xl mx-auto px-4 py-10">
+        <h2 class="text-2xl font-black mb-8 border-l-8 border-rick-cyan pl-4 text-rick-navy italic">1. ESCOLHA O VEÍCULO</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16" id="menu">
             </div>
 
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row hover:scale-[1.02] duration-300 neon-glow">
-                <img src="https://i.ibb.co/VpPxqNX4/Banner-2.png?auto=format&fit=crop&q=80&w=500" class="w-full md:w-40 h-40 object-cover"/>
-                <div class="p-5 flex-1 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-black text-xl mb-1 uppercase text-rick-navy">Mudança Residencial <span class="text-xs text-rick-cyan">Caminhão Baú</span></h3>
-                        <p class="text-gray-600 text-sm">Cuidado total com seus móveis. Disponibilidade de equipe e proteção.</p>
-                    </div>
-                    <div class="flex items-center justify-between mt-4">
-                        <span class="font-bold text-xl text-green-600 italic">Sob Consulta</span>
-                        <button class="bg-rick-navy text-white p-3 rounded-xl add-to-cart-btn hover:bg-zinc-800" data-name="Mudança Residencial" data-price="0.00">
-                            <i class="fa fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
+        <h2 class="text-2xl font-black mb-8 border-l-8 border-rick-cyan pl-4 text-rick-navy italic uppercase">2. Serviços Opcionais</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            <div class="bg-white p-4 rounded-2xl shadow border text-center">
+                <i class="fa fa-user-plus text-3xl text-rick-navy mb-2"></i>
+                <p class="font-bold text-sm uppercase">Ajudante Extra</p>
+                <button class="mt-3 bg-gray-100 w-full py-2 rounded-lg font-bold add-to-cart-btn" data-name="Ajudante Extra" data-price="80.00">+ R$ 80,00</button>
             </div>
-
+            <div class="bg-white p-4 rounded-2xl shadow border text-center">
+                <i class="fa fa-box-open text-3xl text-rick-navy mb-2"></i>
+                <p class="font-bold text-sm uppercase">Kit Embalagem</p>
+                <button class="mt-3 bg-gray-100 w-full py-2 rounded-lg font-bold add-to-cart-btn" data-name="Kit Embalagem" data-price="50.00">+ R$ 50,00</button>
+            </div>
         </div>
     </main>
 
     <div class="fixed inset-0 bg-black/70 z-[100] flex items-center justify-center hidden p-4" id="cart-modal">
         <div class="bg-white w-full max-w-lg rounded-3xl p-6 overflow-y-auto max-h-[90vh]">
-            <h2 class="text-2xl font-black text-center mb-4 uppercase text-rick-navy italic">Sua Solicitação</h2>
-            
-            <div id="cart-items" class="mb-6 space-y-3"></div>
+            <h2 class="text-2xl font-black text-center mb-4 uppercase text-rick-navy italic border-b pb-2">Sua Solicitação</h2>
+            <div id="cart-items" class="mb-6 space-y-2"></div>
 
             <div class="space-y-4">
-                <p class="font-bold border-l-4 border-rick-cyan pl-2 uppercase text-sm text-rick-navy">Preencha os dados do trajeto:</p>
-                
-                <input type="text" id="origin" placeholder="📍 Ponto de Retirada (Rua, Nº, Bairro)" class="w-full p-3 bg-gray-100 rounded-xl outline-none focus:ring-2 ring-cyan-400"/>
-                <input type="text" id="destination" placeholder="🏁 Ponto de Entrega (Rua, Nº, Bairro)" class="w-full p-3 bg-gray-100 rounded-xl outline-none focus:ring-2 ring-cyan-400"/>
-                <textarea id="obs" placeholder="📦 O que será transportado? (Ex: Geladeira, 10 caixas, tem escada?)" class="w-full p-3 bg-gray-100 rounded-xl outline-none h-24 resize-none focus:ring-2 ring-cyan-400"></textarea>
+                <p class="font-bold border-l-4 border-rick-cyan pl-2 uppercase text-xs text-gray-500">Informações de Trajeto</p>
+                <input type="text" id="origin" placeholder="📍 Retirada (Rua, Nº, Bairro)" class="w-full p-3 bg-gray-50 rounded-xl outline-none focus:ring-2 ring-cyan-400"/>
+                <input type="text" id="destination" placeholder="🏁 Entrega (Rua, Nº, Bairro)" class="w-full p-3 bg-gray-50 rounded-xl outline-none focus:ring-2 ring-cyan-400"/>
+                <textarea id="obs" placeholder="📦 Itens a serem levados? (Ex: 1 Geladeira, 5 caixas...)" class="w-full p-3 bg-gray-50 rounded-xl outline-none h-24 resize-none focus:ring-2 ring-cyan-400"></textarea>
             </div>
 
             <div class="flex gap-4 mt-8">
-                <button id="close-modal-btn" class="flex-1 py-3 font-bold text-gray-500">Voltar</button>
-                <button id="checkout-btn" class="flex-1 bg-green-600 text-white py-3 rounded-xl font-black shadow-lg shadow-green-200 uppercase hover:bg-green-700 transition">Enviar Orçamento</button>
+                <button id="close-modal-btn" class="flex-1 py-3 font-bold text-gray-400">Voltar</button>
+                <button id="checkout-btn" class="flex-1 bg-green-600 text-white py-3 rounded-xl font-black uppercase">Enviar Orçamento</button>
             </div>
         </div>
     </div>
 
-    <footer class="fixed bottom-0 w-full bg-rick-navy p-4 flex justify-center z-50 shadow-[0_-5px_15px_rgba(0,0,0,0.3)] border-t border-rick-cyan">
-        <button id="cart-btn" class="flex items-center gap-3 text-white font-black text-lg">
-            (<span id="cart-count">0</span>) VER MINHA LISTA
-            <i class="fa fa-truck-loading text-2xl animate-bounce"></i>
-        </button>
-    </footer>
+    <div id="lead-modal" class="fixed inset-0 bg-black/80 z-[110] hidden items-center justify-center p-4">
+        <div class="bg-white w-full max-w-sm rounded-3xl p-8 text-center shadow-2xl">
+            <i class="fa fa-bolt text-4xl text-red-600 mb-4"></i>
+            <h3 class="text-xl font-black uppercase text-rick-navy mb-2">Orçamento Rápido</h3>
+            <p class="text-gray-500 text-sm mb-6">Deixe seu WhatsApp que ligamos para você agora mesmo!</p>
+            <input type="tel" id="lead-phone" placeholder="(11) 99999-9999" class="w-full p-4 bg-gray-100 rounded-xl mb-4 text-center font-bold text-lg outline-none border-2 focus:border-green-500">
+            <button id="send-lead-btn" class="w-full bg-green-600 text-white py-4 rounded-xl font-black uppercase">Me liguem agora</button>
+            <button onclick="document.getElementById('lead-modal').classList.add('hidden')" class="mt-4 text-gray-400 text-sm">Depois</button>
+        </div>
+    </div>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="script.js"></script>
 </body>
