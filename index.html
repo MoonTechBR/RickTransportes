@@ -4,62 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Rick Transportes | Carretos e Mudanças</title>
-    <meta name="description" content="Rick Transportes - Soluções em Logística Rápida, Carretos e Mudanças. Peça seu orçamento online!">
+    <title>Rick Transportes | Carretos e Mudanças - (11) 96369-2499</title>
+    <meta name="description" content="Solicite seu orçamento de frete ou mudança com a Rick Transportes. Atendimento ágil e seguro com Kia Bongo.">
     
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        .bg-rick { background-color: #003366; } /* Azul da logo */
-        .text-rick { color: #003366; }
-        .border-rick { border-color: #00a8e8; } /* Azul claro do neon */
+        /* Paleta de Cores extraída da Logo */
+        :root {
+            --rick-navy: #0e1e35;      /* Azul escuro do fundo */
+            --rick-cyan: #00d2ff;      /* Ciano neon dos detalhes */
+            --rick-blue: #0056b3;      /* Azul intermediário */
+        }
+
+        .bg-rick-navy { background-color: var(--rick-navy); }
+        .text-rick-cyan { color: var(--rick-cyan); }
+        .border-rick-cyan { border-color: var(--rick-cyan); }
+
+        /* Estilo para simular o brilho neon nas fotos dos serviços */
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+        }
+
+        /* Botão estilizado com o tema */
+        .btn-rick {
+            background-color: var(--rick-navy);
+            border: 2px solid var(--rick-cyan);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-rick:hover {
+            background-color: var(--rick-cyan);
+            color: var(--rick-navy);
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+        }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-100">
 
-    <header class="w-full h-[450px] bg-slate-900 flex flex-col justify-center items-center text-center px-4" 
-            style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2070'); background-size: cover; background-position: center;">
+    <header class="w-full h-[500px] flex flex-col justify-center items-center text-center px-4 relative overflow-hidden" 
+            style="background-image: linear-gradient(rgba(14, 30, 53, 0.85), rgba(14, 30, 53, 0.95)), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=2070'); background-size: cover; background-position: center;">
+        
+        <div class="absolute w-64 h-64 bg-cyan-500/20 blur-[120px] rounded-full"></div>
         
         <img src="./assets/logo-rick.png" alt="Rick Transportes" 
-             class="w-40 h-40 rounded-full border-4 border-white shadow-2xl mb-4 object-cover bg-white"/>
+             class="w-48 h-48 rounded-full border-4 border-rick-cyan shadow-[0_0_30px_rgba(0,210,255,0.4)] mb-6 z-10 bg-white object-contain"/>
         
-        <h1 class="text-4xl font-bold text-white uppercase tracking-tighter">Rick Transportes</h1>
-        <p class="text-white text-lg mt-2 font-light">Soluções em Logística Rápida • Carretos • Mudanças</p>
-        
-        <div class="mt-6 px-4 py-2 rounded-full transition-all" id="status-badge">
+        <h1 class="text-5xl font-black text-white uppercase tracking-tighter z-10 italic">
+            Rick <span class="text-rick-cyan">Transportes</span>
+        </h1>
+        <p class="text-white text-xl mt-2 font-bold z-10 tracking-widest uppercase">
+            Expresso e Mudanças
+        </p>
+
+        <div class="mt-6 px-5 py-2 rounded-full transition-all z-10" id="status-badge">
             <span id="status-text" class="text-white font-bold uppercase text-sm tracking-widest">Verificando Horário...</span>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-10">
-        <h2 class="text-3xl font-black text-center mb-10 text-rick italic underline decoration-blue-400">NOSSOS SERVIÇOS</h2>
+    <main class="max-w-7xl mx-auto px-4 py-10 mb-20">
+        <h2 class="text-3xl font-black text-center mb-10 text-rick-navy italic">SELECIONE O SERVIÇO</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="menu">
             
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row border-b-4 border-blue-500 hover:scale-[1.02] duration-300">
-                <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=500" class="w-full md:w-40 h-40 object-cover"/>
-                <div class="p-5 flex-1">
-                    <h3 class="font-black text-xl mb-1 uppercase">Carretos Expresso</h3>
-                    <p class="text-gray-600 text-sm">Transporte rápido para itens individuais, sofás, geladeiras e compras.</p>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row hover:scale-[1.02] duration-300 neon-glow">
+                <img src="https://images.unsplash.com/photo-1610360759363-2f95c47ac0df?auto=format&fit=crop&q=80&w=500" class="w-full md:w-40 h-40 object-cover"/>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-black text-xl mb-1 uppercase text-rick-navy">Carreto Expresso <span class="text-xs text-rick-cyan">Até 500kg</span></h3>
+                        <p class="text-gray-600 text-sm">Transporte rápido e seguro para sofás, geladeiras, compras e itens individuais.</p>
+                    </div>
                     <div class="flex items-center justify-between mt-4">
                         <span class="font-bold text-xl text-green-600">A partir de R$ 120</span>
-                        <button class="bg-rick text-white p-3 rounded-xl add-to-cart-btn" data-name="Carreto Expresso" data-price="120.00">
+                        <button class="bg-rick-navy text-white p-3 rounded-xl add-to-cart-btn hover:bg-zinc-800" data-name="Carreto Expresso" data-price="120.00">
                             <i class="fa fa-plus"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row border-b-4 border-blue-500 hover:scale-[1.02] duration-300">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row hover:scale-[1.02] duration-300 neon-glow">
                 <img src="https://images.unsplash.com/photo-1600518464441-9154a4dba21b?auto=format&fit=crop&q=80&w=500" class="w-full md:w-40 h-40 object-cover"/>
-                <div class="p-5 flex-1">
-                    <h3 class="font-black text-xl mb-1 uppercase">Mudança Residencial</h3>
-                    <p class="text-gray-600 text-sm">Caminhão baú para mudanças completas com cuidado e proteção.</p>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-black text-xl mb-1 uppercase text-rick-navy">Mudança Residencial <span class="text-xs text-rick-cyan">Caminhão Baú</span></h3>
+                        <p class="text-gray-600 text-sm">Cuidado total com seus móveis. Disponibilidade de equipe e proteção.</p>
+                    </div>
                     <div class="flex items-center justify-between mt-4">
                         <span class="font-bold text-xl text-green-600 italic">Sob Consulta</span>
-                        <button class="bg-rick text-white p-3 rounded-xl add-to-cart-btn" data-name="Mudança Residencial" data-price="0.00">
+                        <button class="bg-rick-navy text-white p-3 rounded-xl add-to-cart-btn hover:bg-zinc-800" data-name="Mudança Residencial" data-price="0.00">
                             <i class="fa fa-plus"></i>
                         </button>
                     </div>
@@ -71,29 +107,29 @@
 
     <div class="fixed inset-0 bg-black/70 z-[100] flex items-center justify-center hidden p-4" id="cart-modal">
         <div class="bg-white w-full max-w-lg rounded-3xl p-6 overflow-y-auto max-h-[90vh]">
-            <h2 class="text-2xl font-black text-center mb-4 uppercase italic">Solicitação de Orçamento</h2>
+            <h2 class="text-2xl font-black text-center mb-4 uppercase text-rick-navy italic">Sua Solicitação</h2>
             
             <div id="cart-items" class="mb-6 space-y-3"></div>
 
             <div class="space-y-4">
-                <p class="font-bold border-l-4 border-rick pl-2 uppercase text-sm">Preencha os dados do trajeto:</p>
+                <p class="font-bold border-l-4 border-rick-cyan pl-2 uppercase text-sm text-rick-navy">Preencha os dados do trajeto:</p>
                 
-                <input type="text" id="origin" placeholder="📍 Ponto de Retirada (Rua, Nº, Bairro)" class="w-full p-3 bg-gray-100 rounded-xl outline-none focus:ring-2 ring-blue-500"/>
-                <input type="text" id="destination" placeholder="🏁 Ponto de Entrega (Rua, Nº, Bairro)" class="w-full p-3 bg-gray-100 rounded-xl outline-none focus:ring-2 ring-blue-500"/>
-                <textarea id="obs" placeholder="📦 O que será transportado? (Ex: Geladeira, 10 caixas, tem escada?)" class="w-full p-3 bg-gray-100 rounded-xl outline-none h-24 resize-none"></textarea>
+                <input type="text" id="origin" placeholder="📍 Ponto de Retirada (Rua, Nº, Bairro)" class="w-full p-3 bg-gray-100 rounded-xl outline-none focus:ring-2 ring-cyan-400"/>
+                <input type="text" id="destination" placeholder="🏁 Ponto de Entrega (Rua, Nº, Bairro)" class="w-full p-3 bg-gray-100 rounded-xl outline-none focus:ring-2 ring-cyan-400"/>
+                <textarea id="obs" placeholder="📦 O que será transportado? (Ex: Geladeira, 10 caixas, tem escada?)" class="w-full p-3 bg-gray-100 rounded-xl outline-none h-24 resize-none focus:ring-2 ring-cyan-400"></textarea>
             </div>
 
             <div class="flex gap-4 mt-8">
                 <button id="close-modal-btn" class="flex-1 py-3 font-bold text-gray-500">Voltar</button>
-                <button id="checkout-btn" class="flex-1 bg-green-600 text-white py-3 rounded-xl font-black shadow-lg shadow-green-200 uppercase">Enviar Orçamento</button>
+                <button id="checkout-btn" class="flex-1 bg-green-600 text-white py-3 rounded-xl font-black shadow-lg shadow-green-200 uppercase hover:bg-green-700 transition">Enviar Orçamento</button>
             </div>
         </div>
     </div>
 
-    <footer class="fixed bottom-0 w-full bg-rick p-4 flex justify-center z-50">
-        <button id="cart-btn" class="flex items-center gap-3 text-white font-black text-lg animate-pulse">
+    <footer class="fixed bottom-0 w-full bg-rick-navy p-4 flex justify-center z-50 shadow-[0_-5px_15px_rgba(0,0,0,0.3)] border-t border-rick-cyan">
+        <button id="cart-btn" class="flex items-center gap-3 text-white font-black text-lg">
             (<span id="cart-count">0</span>) VER MINHA LISTA
-            <i class="fa fa-truck-loading text-2xl"></i>
+            <i class="fa fa-truck-loading text-2xl animate-bounce"></i>
         </button>
     </footer>
 
